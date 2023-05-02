@@ -16,3 +16,8 @@ public class Solut {
     public static void main(String[] args) {
 
     }
+
+    public class Exit {
+        public static void main(String[] args) {
+
+        }
