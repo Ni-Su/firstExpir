@@ -1,0 +1,21 @@
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'java-library'\r\n}\r\n\r\nrepositories {\r\n    mavenCentral()\r\n}\r\n\r\ndependencies {\r\n    testImplementation (\r\n            \"com.codeborne:selenide:6.3.5\",\r\n            \"org.junit.jupiter:junit-jupiter:5.8.2\")\r\n}\r\n\r\ntasks.withType(JavaCompile) {\r\n    options.encoding = 'UTF-8'\r\n}\r\n\r\ntest {\r\n    useJUnitPlatform()\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	
++++ b/build.gradle	
+@@ -8,8 +8,8 @@
+ 
+ dependencies {
+     testImplementation (
+-            "com.codeborne:selenide:6.3.5",
+-            "org.junit.jupiter:junit-jupiter:5.8.2")
++            'com.codeborne:selenide:6.12.3',
++            'org.junit.jupiter:junit-jupiter:5.9.2')
+ }
+ 
+ tasks.withType(JavaCompile) {

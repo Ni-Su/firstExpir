@@ -1,0 +1,18 @@
+Index: src/test/java/SearchTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.junit.jupiter.api.Test;\r\n\r\nimport static com.codeborne.selenide.Condition.text;\r\nimport static com.codeborne.selenide.Selenide.$;\r\nimport static com.codeborne.selenide.Selenide.open;\r\n\r\npublic class SearchTests {\r\n    @Test\r\n    void successfulSearchTest() {\r\n        open(\"https://www.google.com/\");\r\n        $(\"[name=q]\").setValue(\"selenide\").pressEnter();\r\n        $(\"[id=search]\").shouldHave(text(\"https://selenide.org\"));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/SearchTests.java b/src/test/java/SearchTests.java
+--- a/src/test/java/SearchTests.java	
++++ b/src/test/java/SearchTests.java	
+@@ -9,6 +9,6 @@
+     void successfulSearchTest() {
+         open("https://www.google.com/");
+         $("[name=q]").setValue("selenide").pressEnter();
+-        $("[id=search]").shouldHave(text("https://selenide.org"));
++        $("[id=search]").shouldHave(text("Selenide: лаконичные и стабильные UI тесты на Java"));
+     }
+ }

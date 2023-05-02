@@ -1,0 +1,19 @@
+Index: src/test/java/SearchTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.junit.jupiter.api.Test;\r\n\r\nimport static com.codeborne.selenide.Condition.text;\r\nimport static com.codeborne.selenide.Selenide.$;\r\nimport static com.codeborne.selenide.Selenide.open;\r\n\r\npublic class SearchTests {\r\n    @Test\r\n    void successfulSearchTest() {\r\n        open(\"https://www.google.com/\");\r\n        $(\"[name=q]\").setValue(\"selenide\").pressEnter();\r\n        $(\"[id=search]\").shouldHave(text(\"Selenide: лаконичные и стабильные UI тесты на Java\"));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/SearchTests.java b/src/test/java/SearchTests.java
+--- a/src/test/java/SearchTests.java	(revision c02e3f496c198af18003a9a01011694a59bcf7c5)
++++ b/src/test/java/SearchTests.java	(date 1683038177617)
+@@ -12,3 +12,7 @@
+         $("[id=search]").shouldHave(text("Selenide: лаконичные и стабильные UI тесты на Java"));
+     }
+ }
++public class Solution {
++    public static void main(String[] args) {
++
++    }
+\ No newline at end of file

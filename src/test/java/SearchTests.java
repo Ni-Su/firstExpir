@@ -12,3 +12,7 @@ public class SearchTests {
         $("[id=search]").shouldHave(text("https://selenide.org"));
     }
 }
+public class Solution!!!!!! {
+    public static void main(String[] args) {
+
+    }
